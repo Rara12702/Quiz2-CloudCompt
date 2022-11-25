@@ -5,7 +5,7 @@ services:
   #Mysql
   db:
     image: mariadb:10.7
-    container_name: system-mysql
+    container_name: quiz-cloud-compt-mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -21,7 +21,7 @@ services:
   #phpMyAdmin     
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2
-    container_name: system-phpmyadmin
+    container_name: quiz-cloud-compt-phpmyadmin
     ports:
       - "8080:80"    
     depends_on:
@@ -37,7 +37,7 @@ services:
       dockerfile: Dockerfile
     depends_on: 
       - db
-    container_name: system-web-server
+    container_name: quiz-cloud-compt-web-server
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
