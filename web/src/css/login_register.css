@@ -1,0 +1,73 @@
+.login_register-page {
+  width: 400px;
+  padding: 10% 0 0;
+  margin: auto;
+}
+.login_register-form-text{
+  position: relative;
+}
+.login_register-form-text h2{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+
+  max-width: 400px;
+  margin: 0 auto 100px;
+  padding: 50px;
+
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  background: #f2f2f2;
+  width: 100%;
+
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  margin: 0 0 15px;
+  padding: 15px;
+}
+.form button {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  background: orange;
+  color: #FFFFFF;
+  width: 100%;
+  
+  outline: 0;
+
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: orange;
+}
+.form .message {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  color: #b3b3b3;
+  margin: 15px 0 0;  
+}
+.form .message a {
+  color: orange;
+  text-decoration: none;
+}
+
+html, body {
+  height:100%;
+} 
+body {  
+  background-color: #daa52012; 
+}

@@ -1,0 +1,38 @@
+.search-wrap{
+    width: 100%; 
+}
+.search {
+    width: 100%;
+}
+.searchTerm {
+    width: 97%;
+    border: 2px solid #00B4CC;
+    padding: 5px;
+    margin: 0% 1%;
+    height: 25px;
+    border-radius: 8px;
+    outline: none;
+    color: #9DBFAF;
+}
+.searchTerm:focus{
+    color: #00B4CC;
+}
+.searchButton {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+html, body {
+  height:100%;
+} 
+body {  
+  background-color: #daa52012; 
+}
+ 

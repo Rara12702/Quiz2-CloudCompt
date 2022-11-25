@@ -1,0 +1,18 @@
+
+.center {
+  border-radius: 10px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.24);
+  margin: 10%;
+  padding: 4%;
+  border: 3px solid orange;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html, body {
+height:100%;
+} 
+body {  
+background-color: #daa52012; 
+}

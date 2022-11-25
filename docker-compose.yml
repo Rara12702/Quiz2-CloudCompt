@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+
+  #Mysql
+  db:
+    image: mariadb:10.7
+    container_name: system-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    expose: 
+      - 3306
+    volumes:
+      - ./mysql/:/docker-entrypoint-initdb.d  
+      - ./mysql/data:/var/lib/mysql           
+    restart: unless-stopped 
+
+  #phpMyAdmin     
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2
+    container_name: system-phpmyadmin
+    ports:
+      - "8080:80"    
+    depends_on:
+      - db
+    links:
+      - db
+    restart: unless-stopped
+    
+  #Web Service
+  web:
+    build: 
+      context: ./web/
+      dockerfile: Dockerfile
+    depends_on: 
+      - db
+    container_name: system-web-server
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "8200:80" 
+    volumes:
+      - ./web/src/:/var/www/html/
+    restart: unless-stopped
+    links:
+      - db
+
