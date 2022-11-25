@@ -46,7 +46,7 @@
             <br>
             <div class="search">
                     <form action="" method="GET" >
-                        <input class="searchTerm" type="text" name="search" maxlength="255" placeholder="Search by NIM and Name" />
+                        <input class="searchTerm" type="text" name="search" maxlength="255" placeholder="Cari berdsasarkan Nama" />
                         <button class="searchButton" type="submit" hidden="true" name="search-submit">Search</button>
                     </form>
                 </div>
@@ -59,8 +59,8 @@
             <div class="card-body">
                 <table id="contacts-table" class="table search-table">
                     <tr>
-                        <th>NIM</th>
-                        <th>Name</th>
+                        <th>Nama Lengkap</th>
+                        <th>Nama Panggilan</th>
                         <th>Email</th>
                         <th>Telephone</th>
                     </tr>

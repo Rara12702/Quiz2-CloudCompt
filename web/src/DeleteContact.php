@@ -31,8 +31,8 @@
                 <div class="card-body">
                     <table id="contacts-table" class="table table-bordered">
                         <tr>
-                            <th>NIM</th>
-                            <th>Name</th>
+                            <th>Nama Lengkap</th>
+                            <th>Nama Panggilan</th>
                             <th>Email</th>
                             <th>Telephone</th>
                             <th>Action</th>
